@@ -45,6 +45,7 @@ function App() {
 							<Route path="/about" element={<About />} />
 							<Route path="/search" element={<Search />} />
 							<Route path="/posts/:id" element={<Post />} />
+							<Route path="*" component={<Home />} />
 
 							<Route
 								path="/login"
