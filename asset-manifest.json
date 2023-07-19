@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/miniblog/static/css/main.f5507757.css",
+    "main.js": "/miniblog/static/js/main.4210e5d6.js",
+    "static/js/787.95489147.chunk.js": "/miniblog/static/js/787.95489147.chunk.js",
+    "static/media/spfcporto.png": "/miniblog/static/media/spfcporto.5529c33cf47301d3ba56.png",
+    "index.html": "/miniblog/index.html",
+    "main.f5507757.css.map": "/miniblog/static/css/main.f5507757.css.map",
+    "main.4210e5d6.js.map": "/miniblog/static/js/main.4210e5d6.js.map",
+    "787.95489147.chunk.js.map": "/miniblog/static/js/787.95489147.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5507757.css",
+    "static/js/main.4210e5d6.js"
+  ]
+}
