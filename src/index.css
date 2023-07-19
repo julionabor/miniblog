@@ -55,7 +55,7 @@ textarea {
 	background-color: transparent;
 }
 .btn {
-	background-color: #1a8918;
+	background-color: #721c24;
 	color: #fff;
 	text-align: center;
 	cursor: pointer;
@@ -78,7 +78,7 @@ textarea {
 	padding: 7px 30px;
 }
 .btn:hover{
-  background-color: #0F730c;
+  background-color: #721c24;
   color: #fff;
 }
 .btn.btn-outline:hover{

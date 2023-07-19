@@ -1,4 +1,5 @@
 import style from "./Navbar.module.css";
+import logo from "../assets/spfcporto.png"
 import { NavLink } from "react-router-dom";
 
 import { useAuthentication } from "../hooks/useAuthentication";
@@ -13,7 +14,7 @@ const Navbar = () => {
 	return (
 		<nav className={style.navbar}>
 			<NavLink to="/" className={style.brand}>
-				Mini <span>Blog</span>
+				<img src={logo} alt="" /> São Paulo <span>Porto</span>
 			</NavLink>
 			<ul className={style.links_list}>
 				<li>

@@ -4,10 +4,13 @@ import { useAuthValue } from "../../context/AuthContext";
 import { useInsertDocument } from "../../hooks/useInsertDocument";
 
 import styles from "./CreatePost.module.css";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { storage } from "../../firebase/config";
 
 const CreatePost = () => {
 	const [title, setTitle] = useState("");
-	const [image, setImage] = useState("");
+	const [image, setImage] = useState(""); //imgURL
+	const [progress, setProgress] = useState(0);
 	const [body, setBody] = useState("");
 	const [tags, setTags] = useState([]);
 	const [formError, setFormError] = useState("");
@@ -17,6 +20,32 @@ const CreatePost = () => {
 	const { insertDocument, response } = useInsertDocument("posts");
 
 	const navigate = useNavigate();
+
+	const handleUpload = (e) => {
+		e.preventDefault();
+		const file = e.target?.files[0];
+		
+		if (!file) return;
+
+		const storageRef = ref(storage, `images/${file.name}`);
+		const uploadTask = uploadBytesResumable(storageRef, file);
+		uploadTask.on(
+			"state_changed",
+			(snapshot) => {
+				const progress =
+					(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+				setProgress(progress);
+			},
+			(error) => {
+				console.error(error);
+			},
+			() => {
+				getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+					setImage(url);
+				});
+			}
+		);
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -62,6 +91,18 @@ const CreatePost = () => {
 						placeholder="Insira o título"
 						onChange={(e) => setTitle(e.target.value)}
 					/>
+				</label>
+				<label>
+					<span>Carregar Foto: </span>
+					
+						<input type="file" onChange={handleUpload} />
+						<progress value={progress} max="100" />
+						{/* <button type="submit" >Carregar Imagem</button> */}
+					
+				</label>
+				<label>
+					<span>Imagem carregada:</span>
+					{image && <img src={image} alt="" />}
 				</label>
 				<label>
 					<span>URL: </span>
