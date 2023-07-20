@@ -133,7 +133,7 @@ const CreatePost = () => {
 						name="url"
 						value={tags}
 						required
-						placeholder="Insira as tags separadas por vírgulas."
+						placeholder="Separe por vírgulas."
 						onChange={(e) => setTags(e.target.value)}
 					/>
 				</label>

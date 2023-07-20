@@ -5,11 +5,12 @@ const About = () => {
 	return (
 		<div className={styles.about}>
 			<h2>
-				Sobre o Mini <span>Blog</span>
+				Sobre o São Paulo <span>Porto</span>
 			</h2>
 			<p>
-				Este projeto consiste em um blog feito com React no front-end e Firebase
-				no Back-end.
+				São Paulo Porto é um grupo de torcedores São Paulinos apaixonados
+				pelo seu clube que vivem em Portugal e se juntam para falar e acompanhar o time de coração.
+				Este blog foi feito com intuito de todos poderem contribuir e escrever artigos sobre a historia do São Paulo
 			</p>
 			<Link to="/posts/create" className="btn">
 				Criar Post
