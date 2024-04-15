@@ -1,13 +1,12 @@
 .post_detail {
-	max-width: 600px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin: 3em 2em;
 	flex-wrap: wrap;
 }
-.post_detail img{
-    max-width: 600px;
+.post_detail img {
+	max-width: 80%;
 }
 .post_detail h2 {
 	margin-bottom: 0.4em;
