@@ -28,7 +28,7 @@ const Home = () => {
 				/>
 				<button className="btn btn dark">Pesquisar</button>
 			</form>
-			<div>
+			<div className={styles.home}>
 				{loading && <p>A carregar...</p>}
 				{posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
 				{posts && posts.length === 0 && (

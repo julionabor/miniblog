@@ -17,7 +17,7 @@ const PostDetail = ({ post }) => {
 				))}
 			</div>
 			<Link to={`/posts/${post.id}`} className="btn btn-outline">
-				Clique para ver mais
+				Clique para ver mais +
 			</Link>
 		</div>
 	);

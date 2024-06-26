@@ -41,22 +41,28 @@
 .post_row p {
 	color: #000;
 }
-.post_row button,
-.post_row a {
+.p.buttons button,
+.p.buttons a {
 	margin: 0 5px;
-	height: 30px;
 	width: 100px;
-	font-size: 0.7em;
 }
 @media screen and (max-width: 768px) {
 	.post_row {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
+		/* flex-direction: row;
+		flex-wrap: wrap;*/
+		justify-content: space-between; 
 	}
 	.post_row a,
 	.post_row button {
 		margin: 0.5em;
 	}
+	.buttons{
+		display: flex;
+		flex-direction: column;
+	}
+	.post_row p {
+		text-align: start;
+	}
+	
 }
